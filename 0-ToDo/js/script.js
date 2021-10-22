@@ -1,3 +1,26 @@
+/**
+ *  The following script contains source code for an app called To-Do List.
+ *  Basically, you can specify the day when adding a todo.
+ *  If you don't specify a day, the app will automatically create a daily todo for you.
+ *  You can also specify the degree of todo.
+ *  You can complete the todo with one click.
+ *  You can delete it with a double click.
+ */
+
+
+/**
+ *
+ * @type {HTMLElement}
+ *  todoInput: You can fill your todo
+ *  form: Using for adding todo
+ *  todoList: If you add todo you can see in this list
+ *  endDate: Date-picker
+ *  category: Category input. It allows the user to enter a category.
+ *  priority: User can define priority with input range
+ *  explanation: If the user needs extra explanation, he can use it.
+ *  clearBtn: Clear all todos.
+ *
+ */
 const todoInput = document.getElementById('todo-input');
 const form = document.getElementById('form');
 const todoList = document.getElementById('list-group');
@@ -7,11 +30,15 @@ const priority = document.getElementById('priority');
 const explanation = document.getElementById('explanation-input');
 const clearBtn = document.getElementById('clear-all');
 
-// set current date
+/**
+ *  Set minimum date for calendar. It prevents the past date selection.
+ */
 endDate.setAttribute('min', new Date().toISOString().split('T')[0]);
 
 
-//get todos from local storage
+/**
+ * Function that get todos from local storage. If it's empty it's create for you.
+ */
 function getTodos () {
     let todos;
     if (localStorage.getItem('todos') === null) {
@@ -26,7 +53,13 @@ function getTodos () {
 }
 
 
-// count date difference between today and end date
+
+/**
+ * When a todo is created, if a day is selected from the calendar, it takes the difference between the current day and the selected date and calculates the day.
+ * Otherwise it's return daily todo
+ * @param {String} endDate
+ * @returns {string}
+ */
 function countDateDifference (endDate) {
     if (!endDate) {
         return '1 day left';
@@ -38,7 +71,10 @@ function countDateDifference (endDate) {
     return days + ' days left';
 }
 
-// Add todo
+
+/**
+ * Adds todo to todo list.
+ */
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     const todo = todoInput.value;
@@ -50,16 +86,24 @@ form.addEventListener('submit', function (e) {
     if (todo === '') {
         alert('Todo cannot be empty');
     } else {
-
         todoList.appendChild(createLi(todo, end, cat, pri, exp, completed));
-
     }
     addToLocalStorage(todo, end, cat, pri, exp, completed);
     clearInput();
 
 });
 
-// create li element
+
+/**
+ * Create Li elements for user's todo.
+ * @param {String} todo
+ * @param {String} end
+ * @param {String} cat
+ * @param {String} pri
+ * @param {String}exp
+ * @param {Boolean} completed
+ * @returns {HTMLLIElement}
+ */
 function createLi (todo, end, cat, pri, exp, completed) {
     const li = document.createElement('li');
     li.className = 'list-group-item swing-in-top-fwd' + (completed ? ' completed' : '');
@@ -112,7 +156,16 @@ function clearInput () {
     todoInput.focus();
 }
 
-// add to local storage
+
+/**
+ * Adding todo to local storage
+ * @param {String} todo
+ * @param {String} end
+ * @param {String} cat
+ * @param {String} pri
+ * @param {String} exp
+ * @param {Boolean} completed
+ */
 function addToLocalStorage (todo, end, cat, pri, exp, completed) {
     let todos;
     if (localStorage.getItem('todos') === null) {
@@ -125,7 +178,10 @@ function addToLocalStorage (todo, end, cat, pri, exp, completed) {
 }
 
 
-// remove selected todo from local storage
+/**
+ * Remove selected todo from local storage
+ * @param {String} todoTask
+ */
 function removeFromLocalStorage (todoTask) {
     let todos;
     if (localStorage.getItem('todos') === null) {
@@ -149,7 +205,12 @@ clearBtn.addEventListener('click', function () {
 });
 
 
-// update completed or not
+
+/**
+ *  It's updated single todo completed or not.
+ * @param {String} todoTask
+ * @param {Boolean} completed
+ */
 function updateLocalStorage (todoTask, completed) {
     let todos;
     if (localStorage.getItem('todos') === null) {
