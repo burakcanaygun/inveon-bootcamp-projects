@@ -23,9 +23,7 @@ A todo application written with frontend in React and backend in Express.
 
 First you need to clone the repository.
 
-```
-git clone https://github.com/135-Inveon-FullStack-Bootcamp-Classroom/BurakcanAygun_HomeWorks.git
-```
+``` git clone https://github.com/burakcanaygun/inveon-bootcamp-projects.git ```
 
 ### For Frontend
 
