@@ -23,7 +23,7 @@ export const CalcProvider = ({ children }) => {
 
   //if user click equals update lastResult
   const handleEqual = () => {
-    if (currentOperation === "+" || "-" || "*" || "/") {
+    if (currentOperation === "+" || "-" || "x" || "/") {
       const result = calculate(lastResult, mainText, currentOperation);
       setLastResult(null);
       setMainText(result);
@@ -44,7 +44,7 @@ export const CalcProvider = ({ children }) => {
         return parseFloat(a) + parseFloat(b);
       case "-":
         return parseFloat(a) - parseFloat(b);
-      case "*":
+      case "x":
         return parseFloat(a) * parseFloat(b);
       case "/":
         return parseFloat(a) / parseFloat(b);
