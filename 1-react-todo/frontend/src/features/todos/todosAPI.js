@@ -4,14 +4,14 @@ import {v4 as uuid } from "uuid";
 
 // Fetches todos from the server
 export const fetchTodosAsync = createAsyncThunk('todos/fetchTodos', async () => {
-    const response = await axios.get('https://floating-caverns-99192.herokuapp.com/api/todos');
+    const response = await axios.get('http://localhost:5000/api/todos');
     const todos = response.data;
     return todos;
 });
 
 // Adds a todo to the server
 export const addTodoAsync = createAsyncThunk('todos/addTodo', async (todo) => {
-    const response = await axios.post('https://floating-caverns-99192.herokuapp.com/api/todos', {
+    const response = await axios.post('http://localhost:5000/api/todos', {
         id : uuid(),
         title: todo.title,
         explanation: todo.explanation,
@@ -27,7 +27,7 @@ export const addTodoAsync = createAsyncThunk('todos/addTodo', async (todo) => {
 
 // Complete a todo on the server
 export const completeTodoAsync = createAsyncThunk('todos/completeTodo', async (payload) => {
-    const response = await axios.patch(`https://floating-caverns-99192.herokuapp.com/api/todos/${payload.id}`, {
+    const response = await axios.patch(`http://localhost:5000/api/todos/${payload.id}`, {
         completed: payload.completed,
     });
     if(response.status === 200) {
@@ -38,7 +38,7 @@ export const completeTodoAsync = createAsyncThunk('todos/completeTodo', async (p
 
 // Delete a todo on the server
 export const deleteTodoAsync = createAsyncThunk('todos/deleteTodo', async (id) => {
-    const response = await axios.delete(`https://floating-caverns-99192.herokuapp.com/api/todos/${id}`);
+    const response = await axios.delete(`http://localhost:5000/api/todos/${id}`);
     if(response.status === 200) {
         const todo = response.data;
         return {todo};
@@ -47,7 +47,7 @@ export const deleteTodoAsync = createAsyncThunk('todos/deleteTodo', async (id) =
 
 // Delete all todos on the server
 export const deleteAllTodosAsync = createAsyncThunk('todos/deleteAllTodos', async () => {
-    const response = await axios.delete(`https://floating-caverns-99192.herokuapp.com/api/todos`);
+    const response = await axios.delete(`http://localhost:5000/api/todos`);
     if(response.status === 200) {
         return response.data;
     }

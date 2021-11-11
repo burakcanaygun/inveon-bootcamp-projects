@@ -25,7 +25,4 @@ Vanilla Javascript ile yapılan bir todo uygulamasıdır.
 
 ## Linkler
 
-Burakcan Aygün - [LinkedIn](https://www.linkedin.com/in/burakcanaygun/)
-
 Proje Linki: [https://github.com/burakcanaygun/inveon-bootcamp-projects](https://github.com/burakcanaygun/inveon-bootcamp-projects)
-

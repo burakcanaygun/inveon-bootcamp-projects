@@ -27,7 +27,7 @@ live version please [click here](https://immense-meadow-71780.herokuapp.com/).
 
 First you need to clone the repository.
 
-```git clone https://github.com/burakcanaygun/inveon-bootcamp-projects.git```
+```git clone https://github.com/135-Inveon-FullStack-Bootcamp-Classroom/BurakcanAygun_HomeWorks.git```
 
 After cloning, you need to install the dependencies and run start script. If you use npm, you can use the
 following command.

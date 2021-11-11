@@ -1,21 +1,22 @@
-# Inveon Full Stack Bootcamp - Homework 2 - React Todo
+# Inveon Full Stack Bootcamp - Homework 5 - Meme Generator
 
 ## About the Project
 
-A todo application written with frontend in React and backend in Express. For live version [click](https://fathomless-sierra-97318.herokuapp.com/) here.
+A meme generator that uses the [Imgflip API](https://imgflip.com/) to generate memes. For live
+demo, [click here](https://powerful-everglades-28384.herokuapp.com/).
 
 ### Technologies Used
 
 * [React](https://reactjs.org/)
 * [Redux](https://redux.js.org/)
-* [React Bootstrap](https://react-bootstrap.github.io/)
-* [Bootstrap](https://getbootstrap.com/)
-* [UUID](https://www.npmjs.com/package/uuid)
+* [MUI](https://material-ui.com/)
 * [Axios](https://www.npmjs.com/package/axios)
 * [ExpressJS](http://expressjs.com/)
 * [Nodemon](https://www.npmjs.com/package/nodemon)
+* [React Router Dom](https://reacttraining.com/react-router/web/api/Link)
 
 <hr>
+
 
 ![screenshot](img/1.png)
 
@@ -23,9 +24,7 @@ A todo application written with frontend in React and backend in Express. For li
 
 First you need to clone the repository.
 
-```
-git clone https://github.com/135-Inveon-FullStack-Bootcamp-Classroom/BurakcanAygun_HomeWorks.git
-```
+``` git clone https://github.com/burakcanaygun/inveon-bootcamp-projects.git ```
 
 ### For Frontend
 
@@ -59,4 +58,3 @@ If you use yarn, you can use the following command.
 yarn install
 yarn server
 ```
-
