@@ -1,4 +1,4 @@
-# Inveon Full Stack Bootcamp - Homework 5 - Meme Generator
+# Meme Generator
 
 ## About the Project
 
@@ -8,12 +8,13 @@ demo, [click here](https://powerful-everglades-28384.herokuapp.com/).
 ### Technologies Used
 
 * [React](https://reactjs.org/)
-* [Redux](https://redux.js.org/)
+* [Redux Toolkit](https://redux-toolkit.js.org/)
 * [MUI](https://material-ui.com/)
 * [Axios](https://www.npmjs.com/package/axios)
 * [ExpressJS](http://expressjs.com/)
 * [Nodemon](https://www.npmjs.com/package/nodemon)
-* [React Router Dom](https://reacttraining.com/react-router/web/api/Link)
+* [React Router Dom](https://reactrouter.com/)
+
 
 <hr>
 
