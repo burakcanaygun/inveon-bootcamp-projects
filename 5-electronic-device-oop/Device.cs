@@ -5,6 +5,7 @@ namespace ElectronicDeviceOOP
 {
     public abstract class Device
     {
+        // Device properties
         private readonly Guid _serialNumber;
         private readonly string _brand;
         private readonly string _model;
@@ -47,7 +48,6 @@ namespace ElectronicDeviceOOP
             get => _osType;
             init => _osType = value;
         }
-
 
         public abstract void Create();
         public abstract void ShowSpecifications(object obj);

@@ -4,6 +4,7 @@ namespace ElectronicDeviceOOP
 {
     public class Laptop : Device
     {
+        // Override the method from the base class
         public override void Create()
         {
             var laptop = new Laptop
@@ -20,6 +21,10 @@ namespace ElectronicDeviceOOP
             Shutdown();
         }
 
+        /// <summary>
+        /// Method for showing laptop specifications
+        /// </summary>
+        /// <param name="obj">Laptop Object</param>
         public override void ShowSpecifications(object obj)
         {
             Console.WriteLine("Laptop Specifications");
@@ -30,12 +35,12 @@ namespace ElectronicDeviceOOP
             Console.WriteLine("OS Type: {0}", ((Laptop)obj).OsType);
             Console.WriteLine("Serial Number: {0}", ((Laptop)obj).SerialNumber);
         }
-
+        
         private static void Start()
         {
             Console.WriteLine("Laptop Started");
         }
-
+        
         private static void Shutdown()
         {
             Console.WriteLine("Laptop Shutdown");

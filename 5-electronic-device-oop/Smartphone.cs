@@ -4,6 +4,7 @@ namespace ElectronicDeviceOOP
 {
     public class Smartphone : Device
     {
+        // Override the method from the base class
         public override void Create()
         {
             var smartphone = new Smartphone
@@ -13,7 +14,7 @@ namespace ElectronicDeviceOOP
                 Color = "Black",
                 DeviceType = DeviceType.Smartphone,
                 OsType = OsType.Android,
-                SerialNumber = Guid.NewGuid() 
+                SerialNumber = Guid.NewGuid()
             };
             ShowSpecifications(smartphone);
             Call();
@@ -21,6 +22,10 @@ namespace ElectronicDeviceOOP
             TakePicture();
         }
 
+        /// <summary>
+        /// Method for showing smartphone specifications
+        /// </summary>
+        /// <param name="obj">Smartphone Object</param>
         public override void ShowSpecifications(object obj)
         {
             Console.WriteLine("Smartphone Specifications");
