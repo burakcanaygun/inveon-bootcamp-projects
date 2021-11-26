@@ -6,3 +6,4 @@
 * 3 - Calculator
 * 4 - Meme Generator
 * 5 - Electronic Device OOP
+* 6 - MovieDB
